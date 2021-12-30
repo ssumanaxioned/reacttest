@@ -7,3 +7,9 @@
   align-items: flex-start;
   gap: 2.85em;
 }
+
+.button {
+  padding: 1em;
+  margin: 1em 0;
+  background-color: aqua;
+}

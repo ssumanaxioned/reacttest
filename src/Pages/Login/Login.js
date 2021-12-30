@@ -35,7 +35,9 @@ function Login() {
   }
 
   return (
-    <form onSubmit={handleOnSubmit}>
+    <div className="form_container">
+      <h1>Log In</h1>
+      <form onSubmit={handleOnSubmit}>
       <label htmlFor="user">Username   
         <input id='user' name='user' type="text" onChange={handleUsername} />
       </label>
@@ -47,6 +49,7 @@ function Login() {
       }
       <button type="submit">Log In</button>
     </form>
+    </div>
   )
 }
 

@@ -1,0 +1,33 @@
+.form_container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form { 
+  width: 40%;
+  padding: 1em; 
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+label {
+  width: 100%;
+  margin: 1em 0;
+  display: block;
+}
+
+input {
+  width: 100%;
+  display: block;
+}
+
+h1 { font-size: 32px; }
+
+.error { 
+  color: red;
+  margin-bottom: 1em; 
+}

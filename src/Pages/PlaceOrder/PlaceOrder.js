@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './placeorder.css'
 
 function PlaceOrder() {
-  const { products } = useSelector(state => state.selectedReducer)
+  const products = JSON.parse(localStorage.getItem('product'))
   const { data } = useSelector(state => state.apiReducer)
   const filtered = products.map(id => data.filter(item => item.id === id))
 

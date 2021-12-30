@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
@@ -7,7 +7,6 @@ import LoginButton from '../LoginButton'
 import Search from '../Search/Search'
 
 function Header() {
-  const {products} = useSelector(state => state.selectedReducer)
   
   return (
     <nav>
@@ -24,7 +23,7 @@ function Header() {
         <li className='cart'>
           <Link to='/cartitem'>
             <FaShoppingCart style={{fontSize: 36}}/>
-            <p className='number'>{products.length}</p>
+            {/* <p className='number'>{products.length}</p> */}
           </Link>
         </li>
         <li>

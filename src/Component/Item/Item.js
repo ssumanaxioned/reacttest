@@ -14,7 +14,7 @@ function Item(props) {
         <img src={image} alt="item" />
         <div className='details'>
           <p>Price: ${price}</p>
-          <button onClick={()=> dispatch(handleChange(id))}>{name}</button>
+          <button onClick={()=> handleChange(id)}>{name}</button>
         </div>
       </div>
   )
