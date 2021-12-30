@@ -1,10 +1,8 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './item.css';
 
 function Item(props) {
-  const dispatch = useDispatch();
 
   const {id, title, image, price, handleChange, name} = props
   return (

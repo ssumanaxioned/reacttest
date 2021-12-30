@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { removeFromCart } from '../../Actions';
 import Item from '../../Component/Item/Item';
 import './cartitems.css';
 
 function CartItems() {
-  // const products = JSON.parse(localStorage.getItem('product'))
+
   const [products, setProducts] = useState([])
-  // const filtered = products.map(id => data.filter(item => item.id === id))
-  // const {filtered} = useSelector(state => state.apiReducer)
   const [filtered, setFiltered] = useState([])
   const { data } = useSelector(state => state.apiReducer)
   const { url } = useRouteMatch();
@@ -31,6 +28,9 @@ function CartItems() {
 
   return (
     <>
+      {
+        products && <p>No. of products in Cart: {products.length}</p>
+      }
       <Link className='button' to={{ pathname: `${url}/placeorder` }}>PlaceOrder</Link>
       <div className='cartitems'>
         {

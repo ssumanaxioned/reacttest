@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart, fetchAPI } from '../../Actions';
+import { fetchAPI } from '../../Actions';
 import Item from '../Item/Item';
+import './container.css';
 
 function ItemContianer() {
   const [products, setProducts] = useState([])
@@ -26,12 +27,17 @@ function ItemContianer() {
   return (
     <>
       {
+        products && <p>No. of products in Cart: {products.length}</p>
+      }
+      <div className="items">
+      {
         isLoading ? null : (
           filter.map(item=> (
             <Item key={item.id} title={item.title} id={item.id} image={item.image} price={item.price} handleChange={addCart} name={'Add to cart'} />
           ))
         )
       }
+      </div>
     </>
   )
 }

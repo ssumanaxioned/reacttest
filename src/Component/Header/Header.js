@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
 import './header.css'
@@ -7,7 +6,7 @@ import LoginButton from '../LoginButton'
 import Search from '../Search/Search'
 
 function Header() {
-  
+
   return (
     <nav>
       <Search />
@@ -23,7 +22,6 @@ function Header() {
         <li className='cart'>
           <Link to='/cartitem'>
             <FaShoppingCart style={{fontSize: 36}}/>
-            {/* <p className='number'>{products.length}</p> */}
           </Link>
         </li>
         <li>
