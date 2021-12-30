@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
 import './header.css'
 import LoginButton from '../LoginButton'
+import Search from '../Search/Search'
 
 function Header() {
   const {products} = useSelector(state => state.selectedReducer)
   
   return (
     <nav>
+      <Search />
       <ul>
         <li>
           <Link to='/'>Home</Link>

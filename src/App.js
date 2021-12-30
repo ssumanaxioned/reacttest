@@ -7,6 +7,7 @@ import Header from './Component/Header/Header';
 import CartItems from './Pages/CartItems/CartItems';
 import { useSelector } from 'react-redux';
 import ItemDetails from './Pages/ItemDetails/ItemDetails';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 
 function App() {
   const { isLogin } = useSelector(state => state.loginReducer)
@@ -34,7 +35,20 @@ function App() {
               )
             }
           />
-          );
+          <Route exact path='/:random/placeorder'
+            render={({ location }) =>
+              isLogin ? (
+                <PlaceOrder />
+              ) : (
+                <Redirect
+                  to={{
+                    pathname: "/login",
+                    state: { from: location }
+                  }}
+                />
+              )
+            }
+          />
         </Switch>
       </Router>
     </div>

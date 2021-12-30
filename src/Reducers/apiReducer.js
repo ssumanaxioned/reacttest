@@ -1,7 +1,8 @@
 const initialState = {
   isLoading: true,
   data: [],
-  error: ''
+  filter: [],
+  error: '',
 }
 
 const apiReducer =(state = initialState, action)=> {
@@ -12,7 +13,7 @@ const apiReducer =(state = initialState, action)=> {
       }
     case 'FETCH_API_SUCCESS': 
     return {
-      ...state, data: action.payload, isLoading: false
+      ...state, data: action.payload, filter: action.payload , isLoading: false
     }
 
     case 'FETCH_API_FAILURE':
@@ -20,6 +21,10 @@ const apiReducer =(state = initialState, action)=> {
         ...state, error: action.payload, isLoading: false
       }
 
+    case 'FILTER_PRODUCTS' :
+      return {
+        ...state, filter: state.data.filter(item=> (item.title.toLowerCase().includes(action.payload.toLowerCase())))
+      }
     default: return state
   }
 }

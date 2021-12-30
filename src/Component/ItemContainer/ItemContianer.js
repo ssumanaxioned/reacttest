@@ -6,7 +6,7 @@ import Item from '../Item/Item';
 function ItemContianer() {
 
   const dispatch = useDispatch();
-  const {data, isLoading} = useSelector(state => state.apiReducer)
+  const {filter, isLoading} = useSelector(state => state.apiReducer)
 
   useEffect(() => {
     dispatch(fetchAPI('https://fakestoreapi.com/products'))  
@@ -16,7 +16,7 @@ function ItemContianer() {
     <>
       {
         isLoading ? null : (
-          data.map(item=> (
+          filter.map(item=> (
             <Item key={item.id} title={item.title} id={item.id} image={item.image} price={item.price} handleChange={addToCart} name={'Add to cart'} />
           ))
         )

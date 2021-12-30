@@ -61,3 +61,10 @@ export const logout =()=> {
     type: 'LOGOUT'
   }
 }
+
+export const filterProducts =value=> {
+  return {
+    type: 'FILTER_PRODUCTS',
+    payload: value
+  }
+}

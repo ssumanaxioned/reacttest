@@ -1,0 +1,22 @@
+.placeorder { width: 100%; }
+
+.placeorder .items { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.placeorder .items img {
+  width: 15%;
+}
+
+.placeorder .details {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.placeorder .details * { margin-bottom: 1em; }

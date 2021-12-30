@@ -1,0 +1,13 @@
+.item {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.img_detail { width: 40%; }
+.content { flex-basis: 50%; }
+
+.content * { margin-top: 20px; }

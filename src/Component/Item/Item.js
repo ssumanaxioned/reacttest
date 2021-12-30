@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './item.css';
 
 function Item(props) {
@@ -9,7 +9,7 @@ function Item(props) {
   const {id, title, image, price, handleChange, name} = props
   return (
     <div className='item_details'>
-        {/* <Link to={{pathname: `/details/${title}`, state: id }}>Details</Link> */}
+        <Link to={{pathname: `/details/${title}`, state: id }}>Details</Link>
         <h2>{title}</h2>
         <img src={image} alt="item" />
         <div className='details'>
