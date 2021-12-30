@@ -35,6 +35,20 @@ export const fetchAPI =url=>{
   }
 } 
 
+export const addToCart =(id)=> {
+  return {
+    type: 'ADD_TO_CART', 
+    payload: id
+  }
+}
+
+export const removeFromCart =(id)=> {
+  return {
+    type: 'Remove_FROM_CART',
+    payload: id
+  }
+}
+
 export const login =(user)=> {
   return {
     type: 'LOGIN',
@@ -50,7 +64,7 @@ export const logout =()=> {
 
 export const filterProducts =value=> {
   return {
-    type: 'FILTER_PRODUCTS',
+    type: 'FILTERPRODUCTS',
     payload: value
   }
 }

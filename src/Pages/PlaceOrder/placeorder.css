@@ -1,6 +1,10 @@
 .placeorder { width: 100%; }
 
 .placeorder .items { 
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow:  26px 20px 40px #b1b1b1,
+             -26px -20px 40px #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
